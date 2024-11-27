@@ -1,10 +1,15 @@
 import express from "express";
 import cors from "cors";
+import exampleRoute from "./routes/exampleRoute.js";
 
 const app = express();
 const port = process.env.PORT || 8080;
 
 app.use(cors());
+app.use(express.json());
+app.use(express.static("public"));
+app.use("/api/example", exampleRoute);
+
 app.get("/", (req, res) => {
   res.send("Hello World!");
 });
