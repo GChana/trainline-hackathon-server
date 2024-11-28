@@ -12,7 +12,7 @@ app.use(express.static("public"));
 app.use("/api/example", exampleRoute);
 
 app.get("/api/test", (req, res) => {
-  res.send("Hello Trains Over Plains Test 2!");
+  res.send("Hello Trains Over Plains!");
 });
 
 app.get("/", (req, res) => {
